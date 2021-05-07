@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
             getData(){
                 axios.get(this.endpoint).then((response) => {
                     this.data = response.data[0]["2020-12-31"];
-                    this.changer = !this.changer
+                    // this.changer = !this.changer
                 })
             },
 
