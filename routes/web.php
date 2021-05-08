@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/data/{id}', [TestController::class, 'getData']);
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -20,3 +23,7 @@ Route::get('/', function () {
 Route::get('/update', function () {
     return view('update');
 });
+
+//Route::get('/db', function () {
+//    return view('db');
+//});
