@@ -1,10 +1,11 @@
+const api_key = "{{ env('API_KEY') }}"
 document.addEventListener('DOMContentLoaded', function () {
     new Vue({
         el: '#app',
         data: {
             data : [],
             changer : false, // to simulate a prices change since we are working with static data
-            endpoint : 'https://financialmodelingprep.com/api/v4/hedge-fund-portfolio-holdings?cik=0001067983&date=2020-12-31&start=0&count=25&apikey=6e39eba411ee51caced6ab2be49f987b'
+            endpoint : 'https://financialmodelingprep.com/api/v4/hedge-fund-portfolio-holdings?cik=0001067983&date=2020-12-31&start=0&count=25&apikey='+api_key
         },
         mounted() {
             this.timer = setInterval(() => {

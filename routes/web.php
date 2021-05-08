@@ -24,6 +24,6 @@ Route::get('/update', function () {
     return view('update');
 });
 
-//Route::get('/db', function () {
-//    return view('db');
-//});
+Route::get('/db', function () {
+    return view('db');
+});
